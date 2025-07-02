@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "nombre": "Water Clock Aéreo",
+    "titulo": "Redondo minoarte",
+    "descripcion": "Asientos lujoso de retiro fácil, con sistema de doble descarga y asiento de cierre lento",
+    "medidas": "54x36x35 CM",
+    "precio": 382,
+    "imagen": "https://blaistenio.vtexassets.com/arquivos/ids/161023-1200-1200?v=638550112018330000&width=1200&height=1200&aspect=true",
+    "categoria": "Piezas Sanitarias" ,
+    "stock": 5
+  },
+    {
+    "id": 2,
+    "nombre": "WPC Wall Panel QUATTRO CHERRY",
+    "titulo": "Wall Panel",
+    "descripcion": "Revestimiento de madera 160x24x2900 mm, resistente a la humedad, insectos y moho. Ideal para espacios exigentes, con fácil mantenimiento. Aporta calidez y durabilidad en interiores o exteriores cubiertos.",
+    "medidas": "160 ⬈ 24 ↑ 2900 mm",
+    "precio": 383,
+    "imagen": "https://castel.com.ve/assets/img/producto/producto_21.png",
+    "categoria": "Revestimientos" ,
+    "stock": 4
+  },
+  {
+    "id": 3,
+   "nombre": "Mosaico Veneciano ACQUA 22",
+    "titulo": "Mosaico Veneciano",
+    "descripcion": "Mosaico veneciano de 33x33 cm, ideal para exteriores y superficies impermeables en espacios residenciales o comerciales. Alta resistencia al agua, marcas y rasguños. Fácil de mantener y limpiar.",
+    "medidas": "↑ 33 → 33 cm",
+    "precio": 105,
+    "imagen": "https://castel.com.ve/assets/img/producto/producto_16.png",
+    "categoria": "Revestimientos" ,
+    "stock": 35
+  },
+  {
+    "id": 4,
+    "nombre": "Sanitario Clío BLACK",
+    "titulo": "Redondo minoarte",
+    "descripcion": "Inodoro One Piece suspendido de cerámica esmaltada, clase A, con descarga de 6L y capacidad para 800 g de sólidos. Incluye asiento de cierre lento y espejo de agua amplio. Requiere torre de descarga. Fabricado en RPC.",
+    "medidas": "54x36x35 CM",
+    "precio": 385,
+    "imagen": "https://castel.com.ve/assets/img/producto/producto_141.png",
+    "categoria": "Piezas Sanitarias" ,
+    "stock": 31
+  },
+
+{
+    "id": 5,
+    "nombre": "Grifería LEXUS Regadera AP",
+    "titulo": "RPC",
+    "descripcion": "Brazo de ducha cromado Castel de 20 cm o 30 cm, fabricado en latón con cartucho cerámico y conexión de 1/2. Apto para presiones de 0.5 a 3.0 kg/cm². Origen: RPC.",
+    "medidas": "20 cm / 30 cm",
+    "precio": 50,
+    "imagen": "https://home-designmexico.com/cdn/shop/files/1_25de22ec-0cd3-4f37-b4cd-b51ef676be0b_1200x.jpg?v=1697144728",
+    "categoria": "Accesorios" ,
+    "stock": 5
+  },
+{
+    "id": 6,
+    "nombre": "COLADERA RECTANGULAR Acero Inox.",
+    "titulo": "RPC",
+    "descripcion": "Coladera rectangular de acero inoxidable Castel 60 x 10 cm, con vista doble y trampa de olor incluida. Diseño resistente y duradero. Código 90.5004. Origen: RPC.",
+    "medidas": "60x10 cm",
+    "precio": 65,
+    "imagen": "https://castel.com.mx/wp-content/uploads/2022/05/COLADERA-RECTANGULAR.jpg",
+    "categoria": "Accesorios" ,
+    "stock": 5
+  },
+  {
+    "id": 7,
+    "nombre": "Porcelánico Tec. Pul. Doble Carga TOSCANA PLUS",
+    "titulo": "Porcelánico Pulido",
+    "descripcion": "Porcelanato pulido rectificado de 60x60 cm, ideal para pisos y muros en espacios comerciales de alto tránsito. Acabado pulido, tono uniforme (V1). Caja de 2 piezas (1.44 m²), peso: 38 kg.",
+    "medidas": "↑ 60 → 60 cm",
+    "precio": 70,
+    "imagen": "https://castel.com.ve/assets/img/producto/producto_5.png",
+    "categoria": "Revestimientos" ,
+    "stock": 10
+  },
+
+{
+    "id": 8,
+    "nombre": "Porcelánico Esmaltado MC SANDSTONE Black Soft",
+    "titulo": "Porcelánico Esmaltado / Masa Coloreada",
+    "descripcion": "Porcelanato esmaltado de masa coloreada 60x60 cm, acabado natural y rectificado, con impresión digital Inkjet y variación de tono V4. Apto para pisos y muros en zonas de alto tránsito. Caja de 4 piezas (1.44 m²).",
+    "medidas": "↑ 60 → 60 cm",
+    "precio": 35,
+    "imagen": "https://castel.com.ve/assets/img/producto/producto_8.png",
+    "categoria": "Revestimientos" ,
+    "stock": 8
+  },
+  {
+    "id": 9,
+    "nombre": "Lavamanos ARAL",
+    "titulo": "Lavamanos",
+    "descripcion": "Lavabo de sobreponer en cerámica esmaltada blanca, de 460x150 mm, con drenaje central de 45 mm y rebosadero incorporado. Monomando instalado sobre el lavabo. Diseño funcional y elegante.",
+    "medidas": "→ 460 ↑ 150 mm",
+    "precio": 160,
+    "imagen": "https://expoceramicas.com/wp-content/uploads/2024/09/LAVABO-ARAL.webp",
+    "categoria": "Piezas Sanitarias" ,
+    "stock": 29
+  },
+  {
+      "id": 10,
+    "nombre": "LVT OZZ BLACK",
+    "titulo": "Alto tráfico",
+    "descripcion": "Piso vinílico de alto tráfico 457.2x914.4 mm, autoextinguible, hipoalergénico y de fácil limpieza. Antiderrapante, termoacústico y resistente al impacto. Ideal para espacios exigentes con recubrimiento",
+    "medidas": "(457.2x914.4mm)(3.3mm/0.3mm)",
+    "precio": 45,
+    "imagen": "https://5.imimg.com/data5/NQ/XP/FS/SELLER-37381362/black-sandstone-500x500.jpg",
+    "categoria": "Revestimientos" ,
+    "stock": 2
+  },
+{
+    "id": 11,
+    "nombre": "Bañera MAUI BLANCA",
+    "titulo": "Bañera",
+    "descripcion": "Bañera de sobreponer a piso de 1700x590x800 mm, fabricada en resina reforzada con fibra de vidrio y soporte de acero inoxidable. Acabado blanco, capacidad de 400 L. Incluye sistema de drenaje.",
+    "medidas": "→ 1700 ↑ 590 ⬈ 800 mm",
+    "precio": 600,
+    "imagen": "https://img.archiexpo.es/images_ae/photo-mg/224-15953141.jpg",
+    "categoria": "Piezas Sanitarias" ,
+    "stock": 11
+  }
+]
