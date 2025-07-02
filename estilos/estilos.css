@@ -412,14 +412,6 @@ h3 {
 }
 
 #banner-texto {
-  /*background-image: url(image/background-texto.jpg);
-  height: 650px;
-  background-color: rgba(
-    245,
-    238,
-    228,
-    0.656
-  );  Cambia el valor de 0.5 para ajustar la transparencia */
   margin-top: 8rem;
   background-blend-mode: overlay; /* Mezcla el color con la imagen */
   background-position: no-repeat;
