@@ -25,7 +25,12 @@ class Carrito {
   agregarProducto(producto) {
     const productoExistente = this.productos.find((p) => p.id === producto.id);
     if (productoExistente) {
-      productoExistente.cantidad += 1;
+      if (productoExistente.cantidad < producto.stock) {
+        productoExistente.cantidad += 1;
+      } else {
+        this.mostrarAlertaStock(producto);
+        return;
+      }
     } else {
       producto.cantidad = 1;
       this.productos.push(producto);
@@ -56,10 +61,34 @@ class Carrito {
   sumarProducto(id) {
     const producto = this.productos.find((p) => p.id === id);
     if (producto) {
-      producto.cantidad += 1;
-      this.guardarEnLocalStorage();
-      this.mostrarCarrito();
+      if (producto.cantidad < producto.stock) {
+        producto.cantidad += 1;
+        this.guardarEnLocalStorage();
+        this.mostrarCarrito();
+      } else {
+        this.mostrarAlertaStock(producto);
+      }
     }
+  }
+
+  mostrarAlertaStock(producto) {
+    const alertasContainer = document.getElementById("alertas-container");
+    if (!alertasContainer) return;
+
+    const alerta = document.createElement("div");
+    alerta.className = "alert alert-warning alert-dismissible fade show";
+    alerta.role = "alert";
+    alerta.innerHTML = `
+      <strong>${producto.nombre}</strong>: No se puede agregar más cantidad. Stock máximo (${producto.stock}) alcanzado.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    `;
+    alertasContainer.appendChild(alerta);
+
+    setTimeout(() => {
+      alerta.classList.remove("show");
+      alerta.classList.add("hide");
+      setTimeout(() => alerta.remove(), 500);
+    }, 4000);
   }
 
   obtenerProducto(id) {

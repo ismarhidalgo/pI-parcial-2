@@ -402,7 +402,7 @@ h3 {
   text-align: center;
 }
 
-#inicio {
+#inicio, #home{
   background-image: url(image/imagine-dragons.jpg);
   background-repeat: no-repeat;
   background-position: 854px 0px;
