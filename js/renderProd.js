@@ -10,7 +10,7 @@ fetch('productos.json')
 
 function renderProductos(productos) {
     const contenedor = document.getElementById("productos");
-    contenedor.innerHTML = ''; // limpiamos si hay
+    contenedor.innerHTML = ''; 
     productos.forEach(prod => {
         const card = document.createElement("div");
         card.className = "producto";

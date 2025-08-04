@@ -25,7 +25,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         productos.forEach((producto) => producto.show("#productos"));
         selectCategoria.value = "";
       } else {
-        const productosFiltrados = productos.filter((producto) => producto.categoria === categoria);
+        const productosFiltrados = productos.filter(
+          (producto) => producto.categoria === categoria
+        );
         productosFiltrados.forEach((producto) => producto.show("#productos"));
         selectCategoria.value = categoria;
       }
@@ -62,7 +64,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
       const categoria = event.target.textContent.trim();
-      selectCategoria.value = categoria === "Todas las categorias" ? "" : categoria;
+      selectCategoria.value =
+        categoria === "Todas las categorias" ? "" : categoria;
       filtrarYOrdenarProductos();
     });
   });
@@ -82,6 +85,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     renderizarProductos(productosFiltrados);
+
+
+    if (categoriaSeleccionada && categoriaSeleccionada !== ultimaCategoriaMostrada) {
+    mostrarOfertaEspecial(categoriaSeleccionada);
+    ultimaCategoriaMostrada = categoriaSeleccionada;
+  }
+
+
+
+
   }
 
   const alertasContainer = document.getElementById("alertas-container");
@@ -166,26 +179,136 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Guardar en localStorage cada vez que cambia el carrito
   const originalAgregar = carrito.agregarProducto.bind(carrito);
-  carrito.agregarProducto = function(producto) {
+  carrito.agregarProducto = function (producto) {
     originalAgregar(producto);
     localStorage.setItem("carrito", JSON.stringify(this.productos));
   };
 
   const originalEliminar = carrito.eliminarProducto.bind(carrito);
-  carrito.eliminarProducto = function(id) {
+  carrito.eliminarProducto = function (id) {
     originalEliminar(id);
     localStorage.setItem("carrito", JSON.stringify(this.productos));
   };
 
   const originalSumar = carrito.sumarProducto.bind(carrito);
-  carrito.sumarProducto = function(id) {
+  carrito.sumarProducto = function (id) {
     originalSumar(id);
     localStorage.setItem("carrito", JSON.stringify(this.productos));
   };
 
   const originalRestar = carrito.restarProducto.bind(carrito);
-  carrito.restarProducto = function(id) {
+  carrito.restarProducto = function (id) {
     originalRestar(id);
     localStorage.setItem("carrito", JSON.stringify(this.productos));
   };
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const pagoEfectivo = document.getElementById("pagoEfectivo");
+  const pagoTarjeta = document.getElementById("pagoTarjeta");
+  const camposTarjeta = document.getElementById("camposTarjeta");
+
+  function actualizarCamposTarjeta() {
+    if (pagoTarjeta.checked) {
+      camposTarjeta.style.display = "block";
+      document.getElementById("nombreTarjeta").required = true;
+      document.getElementById("numeroTarjeta").required = true;
+      document.getElementById("cuotasPago").required = true;
+    } else {
+      camposTarjeta.style.display = "none";
+      document.getElementById("nombreTarjeta").required = false;
+      document.getElementById("numeroTarjeta").required = false;
+      document.getElementById("cuotasPago").required = false;
+    }
+  }
+
+  pagoEfectivo.addEventListener("change", actualizarCamposTarjeta);
+  pagoTarjeta.addEventListener("change", actualizarCamposTarjeta);
+
+  actualizarCamposTarjeta();
+});
+
+
+
+
+const ofertas = {
+  "Piezas Sanitarias": {
+    imagen: "img/oferta-sanitarios.png"
+  },
+  "Revestimientos": {
+    imagen: "img/oferta-revestimientos.png"
+  },
+  "Accesorios": {
+    imagen: "img/oferta-accesorios.png"
+  },
+  
+};
+
+let ultimaCategoriaMostrada = null;
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btnCerrar = document.getElementById("cerrar-oferta");
+  if (btnCerrar) {
+    btnCerrar.addEventListener("click", cerrarOferta);
+  }
+});
+
+
+
+function cerrarOferta() {
+  const banner = document.getElementById("oferta-flotante");
+  if (banner) {
+    banner.classList.add("d-none");
+  }
+}
+
+function mostrarOfertaEspecial(categoria) {
+  const banner = document.getElementById("oferta-flotante");
+  const img = document.getElementById("img-oferta");
+
+  if (!banner || !img) return;
+
+  const datos = ofertas[categoria];
+  if (!datos) return;
+
+  img.src = datos.imagen;
+  banner.classList.remove("d-none");
+
+  setTimeout(() => {
+    banner.classList.add("d-none");
+  }, 10000);
+}
+
+const modalCompra = document.getElementById("modalCompra");
+const contenidoOriginalModal = modalCompra.innerHTML;
+
+modalCompra.addEventListener("hidden.bs.modal", () => {
+
+  modalCompra.innerHTML = contenidoOriginalModal;
+
+  const pagoEfectivo = document.getElementById("pagoEfectivo");
+  const pagoTarjeta = document.getElementById("pagoTarjeta");
+  const camposTarjeta = document.getElementById("camposTarjeta");
+
+  function actualizarCamposTarjeta() {
+    if (pagoTarjeta.checked) {
+      camposTarjeta.style.display = "block";
+      document.getElementById("nombreTarjeta").required = true;
+      document.getElementById("numeroTarjeta").required = true;
+      document.getElementById("cuotasPago").required = true;
+    } else {
+      camposTarjeta.style.display = "none";
+      document.getElementById("nombreTarjeta").required = false;
+      document.getElementById("numeroTarjeta").required = false;
+      document.getElementById("cuotasPago").required = false;
+    }
+  }
+
+  pagoEfectivo.addEventListener("change", actualizarCamposTarjeta);
+  pagoTarjeta.addEventListener("change", actualizarCamposTarjeta);
+  actualizarCamposTarjeta(); 
+
+  carrito.confirmarCompra();
 });

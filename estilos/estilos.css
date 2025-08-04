@@ -34,7 +34,7 @@ html {
 
 :root {
   --verde-petroleo: #29675c;
-   --verde-claro: #3a7d71;
+  --verde-claro: #3a7d71;
   --terracota: #d26a5c;
   --terracota-claro: #e59a8d;
   --negro: #1e1e1e;
@@ -114,8 +114,8 @@ h3 {
 }
 .micarrito {
   margin-top: 4px;
-  align-items:end;
-  justify-content:end;
+  align-items: end;
+  justify-content: end;
 }
 .fotoNav {
   width: 6rem;
@@ -131,7 +131,7 @@ h3 {
 }
 
 /* CAROUSEL */
-.container{
+.container {
   margin-top: -9rem;
 }
 
@@ -141,15 +141,15 @@ h3 {
   margin: 0 auto; /* centrado horizontal */
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   margin-top: 0;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
-  top: 35rem;         /* 🔼 arriba de la imagen */
-  bottom: auto;      /* ❌ anula el bottom */
+  top: 35rem; /* 🔼 arriba de la imagen */
+  bottom: auto; /* ❌ anula el bottom */
   left: 0;
   right: 0;
   display: flex;
@@ -159,10 +159,10 @@ h3 {
 }
 
 .carousel-control-prev button {
-    background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .carousel-control-prev .active {
-    background-color: red;
+  background-color: red;
 }
 
 .carousel-indicators {
@@ -213,7 +213,7 @@ h3 {
   background-position: 40% center;
 }
 
-.text-white h2, 
+.text-white h2,
 .text-white p {
   color: white;
   text-shadow: 1px 1px 2px black;
@@ -291,14 +291,15 @@ h3 {
 
 /*FILTROS*/
 .seccionFiltros {
-   display: flex;
+  display: flex;
   justify-content: center; /* centrado en horizontal */
-  gap: 40px;               /* espacio entre los dos filtros */
-  flex-wrap: wrap;         /* para que se acomoden en móviles */
+  gap: 40px; /* espacio entre los dos filtros */
+  flex-wrap: wrap; /* para que se acomoden en móviles */
   margin-bottom: 40px;
 }
 
-.filtro-contenedor, .filtro-precio {
+.filtro-contenedor,
+.filtro-precio {
   display: flex;
   justify-content: center; /* alinea todo a la derecha */
   margin-bottom: 40px;
@@ -308,7 +309,8 @@ h3 {
   flex-wrap: wrap; /* opcional: para que se acomode en pantallas chicas */
 }
 
-#categoria, #ordenPrecio {
+#categoria,
+#ordenPrecio {
   padding: 6px 120px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -345,12 +347,29 @@ h3 {
   font-weight: bold;
 }
 
+
+
 .btn {
   background-color: var(--terracota);
   color: var(--blanco);
 }
 .btn:hover {
   background-color: var(--terracota-claro);
+}
+
+.btnFc {
+  color: black;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  width: 35rem;
+  height: 5rem;
+  border-radius: 3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.btnFc {
+  background-color: var(--verde-petroleo);
+  color: var(--blanco);
 }
 
 .btnSec {
@@ -362,7 +381,11 @@ h3 {
   border-radius: 3rem;
   font-size: 1.4rem;
   font-weight: bold;
+  color: white;
 }
+
+
+
 
 .btnSec:hover {
   background-color: var(--verde-claro);
@@ -402,7 +425,8 @@ h3 {
   text-align: center;
 }
 
-#inicio, #home{
+#inicio,
+#home {
   background-image: url(image/imagine-dragons.jpg);
   background-repeat: no-repeat;
   background-position: 854px 0px;
@@ -416,6 +440,11 @@ h3 {
   background-blend-mode: overlay; /* Mezcla el color con la imagen */
   background-position: no-repeat;
   background-size: cover;
+}
+
+.yeisy {
+  height: 40rem;
+  border-radius: 1rem;
 }
 
 #banner-texto p {
@@ -534,37 +563,7 @@ legend {
   color: #134f5c;
 }
 
-input {
-  margin: 0.5em 0;
-  border: 1px solid var(--verde-petroleo);
-  border-radius: 0.5em;
-  padding: 0 1em;
-  font-size: 2.4em;
-  line-height: 1.5;
-  text-align: left;
-  color: #134f5c;
-}
 
-button,
-input[type="button"],
-input[type="submit"] {
-  margin: 0.5em 0;
-  border: none;
-  border-radius: 0.5em;
-  padding: 0.25em 0.5em;
-  background: var(--verde-petroleo);
-  cursor: pointer;
-  font-size: 2.4em;
-  line-height: 1.5;
-  text-align: center;
-  color: #d0e0e3;
-}
-
-input[type="button"]:disabled,
-input[type="submit"]:disabled {
-  opacity: 0.8;
-  cursor: not-allowed;
-}
 
 form textarea {
   margin: 0.5em 0;
@@ -664,6 +663,7 @@ input[type="submit"]:hover {
   text-align: center;
 }
 #producto {
+  margin-top: 2rem;
   text-align: center;
 }
 #productos {
@@ -719,7 +719,7 @@ input[type="submit"]:hover {
 }
 
 .modal-body {
-  height: 45rem;
+  height: 60rem;
 }
 
 #closeModal {
@@ -815,6 +815,128 @@ input[type="submit"]:hover {
   gap: 0.5rem;
 }
 
+#preguntas {
+  margin-top: 2rem;
+}
+
+#sobremi,
+#form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+#form p {
+  font-size: 1.8rem;
+}
+
+
+.sec1-contenedor {
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.sec1-img {
+  flex: 1;
+  height: 100px;
+}
+.sec1-texto {
+  flex: 1;
+  background-color: var(--colorsecundario);
+}
+
+.formulario {
+  margin: 0 auto 100px auto;
+  border-radius: 3rem;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+.formulario input {
+  width: 100%;
+}
+.formulario p {
+  font-size: 1.2rem;
+}
+#motivo {
+  margin-bottom: 2rem;
+}
+#pago {
+  margin-bottom: 2rem;
+}
+#contacto {
+  text-align: center;
+}
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  
+  margin-bottom: 1.5rem;
+}
+
+#btnForm {
+  background-color: var(--verde-petroleo);
+  height: 4.5rem;
+  border-radius: 2rem;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0 2rem;
+  transition: background-color 0.3s ease;
+}
+
+#btnForm:hover {
+  background-color: var(--verde-claro);
+  color: white;
+}
+
+
+.modal-content {
+  width: 60rem;
+}
+
+.modal-header h2 {
+  font-size: 2.5rem;
+}
+
+.form-label {
+  font-size: 1.5rem;
+}
+
+.form-control {
+  width: 50rem;
+  height: 4rem;
+}
+#direccionCliente {
+  width: 50rem;
+  height: 5rem;
+}
+
+.metodo-pago h3 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+
+.text-success {
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: 2rem;
+}
+
+/*PREGUNTAS FRECUENTES*/
+.accordion-button {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.accordion-body {
+  font-size: 1.5rem;
+}
+
 /**
  *	Web
  */
@@ -824,3 +946,108 @@ input[type="submit"]:hover {
     flex-direction: row;
   }
 }
+
+/* Cartel flotante de oferta centrado en pantalla */
+#oferta-flotante {
+  position: fixed; /* El cartel se mantiene fijo en pantalla aunque hagas scroll */
+  top: 50%; /* Posicionamiento vertical al 50% de la pantalla */
+  left: 50%; /* Posicionamiento horizontal al 50% de la pantalla */
+  transform: translate(-50%, -50%); /* Ajusta la posición para centrarlo realmente */
+  background-color: white; /* Fondo blanco */
+  color: #000; /* Color del texto */
+  padding: 2rem; /* Espaciado interno general */
+  font-size: 2rem; /* Tamaño base del texto */
+  border-radius: 1.5rem; /* Bordes redondeados para estética suave */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* Sombra alrededor del cartel */
+  z-index: 5000; /* Prioridad visual por encima del resto */
+  text-align: center; /* Centra el contenido dentro del cartel */
+  max-width: 90%; /* No supera el 90% del ancho en pantallas chicas */
+  width: 500px; /* Ancho fijo */
+  animation: fade-in 0.5s ease; /* Animación suave de entrada */
+}
+
+/* Imagen de la oferta */
+#oferta-flotante img {
+  width: 100%; /* Ocupa todo el ancho del cartel */
+  max-height: 550px; /* No supera 250px de alto */
+  object-fit: cover; /* Corta y ajusta la imagen sin deformarla */
+  border-radius: 1rem; /* Bordes redondeados para la imagen */
+  margin-bottom: 1rem; /* Espacio debajo de la imagen */
+}
+
+
+/* Botón de cierre (la "X") del cartel */
+#cerrar-oferta {
+  position: absolute; /* Se posiciona relativo al cartel */
+  top: 10px; /* A 10px del borde superior */
+  right: 10px; /* A 10px del borde derecho */
+  background-color: #e74c3c; /* Rojo intenso (color de error/acción) */
+  color: white; /* Color del ícono/texto */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Forma redonda */
+  width: 30px; /* Tamaño del botón */
+  height: 30px;
+  font-size: 1.2rem; /* Tamaño del ícono/texto */
+  font-weight: bold;
+  cursor: pointer; /* Cursor tipo manito */
+  z-index: 10000; /* Prioridad máxima sobre todo */
+  transition: background-color 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+/* Efecto hover del botón X */
+#cerrar-oferta:hover {
+  background-color: #c0392b; /* Rojo más oscuro cuando se pasa el mouse */
+}
+
+.form-check-input[type="radio"] {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: 0.2rem;
+}
+
+.form-check-label {
+  font-size: 1.6rem;
+  margin-left: 0.6rem;
+  color: var(--verde-petroleo);
+}
+
+.mensaje-confirmacion {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #2d6a4f;
+}
+
+.mensaje-confirmacion h5 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #2d6a4f;
+  margin-bottom: 1rem;
+}
+
+.mensaje-confirmacion p {
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#form .formulario {
+  max-width: 900px;
+  margin: auto;
+}
+
+#btnForm {
+  background-color: #29675c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  width: 400px;
+}
+
+#btnForm:hover {
+  background-color: #3a7d71;
+}
+
+
+

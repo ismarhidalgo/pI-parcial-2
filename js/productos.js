@@ -31,11 +31,7 @@ class Producto {
     this.stock = stock;
   }
 
-  /**
-   * Devuelve un string con formato de HTML para mostrar
-   * el producto
-   *
-   */
+
   toElement() {
     const productDiv = document.createElement("div");
     productDiv.classList.add("col-sm-12", "col-md-6", "col-lg-4", "mb-4");
@@ -139,14 +135,8 @@ class Producto {
     btnmi.textContent = "Mostrar información";
     btnmi.className = "btn btn-sm me-2 btnSec";
     btnmi.setAttribute("data-id", this.id);
-    /*btnmi.onclick = () => {
-      const modal = new bootstrap.Modal(
-        document.getElementById("productosModal")
-      );
-      modal.show();
-    };*/
 
-    // Agrupamos los botones
+
     const btnGroup = document.createElement("div");
     btnGroup.className = "d-flex justify-content-start gap-2 mt-3";
     btnGroup.append(btnAgregar, btnmi);
